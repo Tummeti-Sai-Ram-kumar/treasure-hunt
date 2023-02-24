@@ -1,0 +1,395 @@
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mob{
+    display: none;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 80px);
+    width: 100%;
+    margin: 20px auto;
+}
+
+.main-div {
+    width: 98%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.chip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: bold;
+    margin: 5px;
+    background: #c6c0a8;
+    cursor: pointer;
+}
+
+.chip:hover {
+    opacity: 0.8;
+}
+/*
+
+.timer-div {
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+*/
+
+.button {
+    padding: 5px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0px auto;
+    font-family: Poppins;
+    box-shadow: 1px 1px 10px grey;
+}
+/*
+.timer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    height: 50px;
+    width: 50px;
+    color: rgb(133, 190, 133);
+    border: 4px solid #85be85;
+    border-radius: 50%;
+    font-size: 22px;
+    font-family: "Russo One";
+}
+*/
+.timer-div{
+    width : 95%;
+    height : 25px;
+    border : 0px solid red;
+    border-radius : 3px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Russo One";
+    margin : 0px auto;
+    background:grey;
+}
+.timer-div p{
+    background: #85be85;
+    width : 100%;
+    height : 100%;
+    border-radius : 3px;
+    animation: Width 15s both linear;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes Width{
+    0%{
+        width : 100%;
+    }
+    100%{
+        width : 0%;
+    }
+}
+.numbers p , .treasures p{
+    text-align: center;
+    margin: 5px auto;
+    font-size: 18px;
+    font-family: Poppins;
+    color: white;
+}
+
+.nums {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nums .selected {
+    height: 50px;
+    width: 50px;
+    font-size: 15px;
+    background: rgb(219, 184, 118);
+    font-family: "Russo One";
+}
+
+
+
+
+
+.instructions {
+    margin: 40px;
+    color: white;
+}
+
+.instructions p {
+    font-family: Poppins;
+    font-size: 18px;
+}
+
+.instructions span {
+    margin-right: 5px;
+}
+
+
+
+.boxes{
+    width : 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin : 0px auto;
+    
+}
+.boxes div{
+    margin: 20px;
+    border : 1px solid white;
+}
+.boxes div div{
+    border : none;
+}
+
+.disable{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.component{
+    color : white;
+    flex-direction: column;
+}
+.spl{
+    transform: scale(1.2);
+}
+.component .details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.details div{
+    color : black;
+    height : 100px;
+    width : 180px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(219, 184, 118);
+    flex-direction: column;
+}
+.details div p:first-child{
+    font-family: "Russo One";
+    font-size : 20px;
+    
+}
+.details div p:last-child{
+    font-family: Poppins;
+    font-size: 18px;
+}
+.details span{
+    margin-top: 100px;
+}
+.component .history{
+    height: 180px;
+    width : 90%;
+    margin : 20px auto;
+    color: black;
+    background: grey;
+}
+.history h3{
+    text-align: center;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.history .elements{
+    margin: 10px;
+    margin-bottom: 40px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.history .elements p{
+    font-family: Poppins;
+    font-size: 16px;
+    text-align: center;
+}
+
+.component .buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px auto;
+    width : 100%;
+}
+.buttons button{
+    padding: 5px 20px;
+    font-family: Poppins;
+    font-size: 18px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 1px 10px grey;
+    outline: none;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top : 10px;
+    margin-bottom: 20px;
+}
+.details .elements{
+    display: none;
+}
+
+@media screen and (max-width : 600px) {
+    .desk{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+    .board{
+        margin : 10px auto;
+    }
+    nav p{
+        font-size: 18px;
+        font-family: Poppins;
+    }
+    
+    .instructions {
+        margin: 30px;
+    }
+
+    .instructions p {
+        font-family: Poppins;
+        font-size: 14px;
+
+    }
+
+    .button {
+        padding: 5px 15px;
+        font-size: 16px;
+        margin-top : 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin : 0px auto;
+    }
+
+    
+
+    .chip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        height: 40px;
+        width: 30px;
+    }
+    .main-div {
+        width: 100%;
+        margin: -10px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        overflow-x: hidden;
+    }
+    .board {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6 , 1fr);
+        grid-template-rows: repeat(7, 52px);
+        width: 100%;
+        margin-left : 10px;
+    } 
+    .boxes{
+        display: none;
+    }
+
+
+    .component .details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 95%;
+        margin : 0px auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .details div{
+        color : black;
+        height : 50px;
+        width : 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background: rgb(219, 184, 118);
+        flex-direction: column;
+    }
+    .details div p:first-child{
+        font-family: "Russo One";
+        font-size : 14px;
+        
+    }
+    .details div p:last-child{
+        font-size: 12px;
+    }
+    .details span{
+        margin-top: 10px;
+    }
+    
+    .component .buttons{
+        width : 97%;
+        margin : 0px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .buttons button{
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    .component .history{
+        display: none;
+    }
+    .details .elements{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .timer-div{
+        width : 90%;
+        height : 15px;
+        border-radius : 3px;
+        font-size: 12px;
+        background:grey;
+    }
+    
+    
+}
+
