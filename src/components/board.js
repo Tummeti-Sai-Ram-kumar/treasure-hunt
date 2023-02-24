@@ -131,7 +131,8 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
         if(time <= 3 && time > 0){
 
             document.getElementsByClassName('timer')[0].style.background = "red"
-            document.getElementsByClassName('timer')[0].style.color = "transparent"
+
+            document.getElementsByClassName('timer')[1].style.background = "red"
         }
     }, [time])
 
